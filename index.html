@@ -12,23 +12,40 @@
         /* Set Inter font and a smooth dark background */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0d1117; /* GitHub Dark Background */
+            background-color: #0d1117; /* GitHub Dark Background - Base */
             color: #c9d1d9; /* Light text color */
+            /* VIBRANCY CHANGE 1: Subtle background gradient for depth */
+            background-image: radial-gradient(circle at top left, #1a202c 1%, #0d1117 75%);
         }
-        /* Custom class for the accent color used on borders, text, and icons */
+        /* VIBRANCY CHANGE 2: Updated Accent Color to a brighter cyan-blue */
         .accent-color {
-            color: #38bdf8; /* Sky Blue Accent */
+            color: #00eaff; 
         }
         .accent-bg {
-            background-color: #38bdf8;
+            background-color: #00eaff;
         }
         .border-accent {
-            border-color: #38bdf8;
+            border-color: #00eaff;
         }
-        /* Style for interactive elements */
+
+        /* VIBRANCY CHANGE 3: Enhanced hover effect with a stronger, glowing shadow */
+        .card {
+             /* Add a subtle initial shadow for depth */
+            box-shadow: 0 4px 6px -1px rgba(0, 234, 255, 0.05), 0 2px 4px -2px rgba(0, 234, 255, 0.03);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(56, 189, 248, 0.2);
+            transform: translateY(-8px); /* Slightly larger lift */
+            /* Stronger glow effect */
+            box-shadow: 
+                0 0 5px #00eaff, 
+                0 0 15px #00eaff, 
+                0 15px 30px rgba(0, 0, 0, 0.6);
+        }
+        
+        /* VIBRANCY CHANGE 4: Adding text shadow/glow to the main header */
+        .header-glow {
+            text-shadow: 0 0 10px rgba(0, 234, 255, 0.6), 0 0 20px rgba(0, 234, 255, 0.2);
         }
     </style>
 </head>
@@ -39,18 +56,20 @@
 
         <!-- Header - Name and Tagline -->
         <header class="max-w-4xl mx-auto mb-12 text-center pt-8">
-            <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight text-white mb-2">
+            <!-- Updated H1 with header-glow class -->
+            <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight text-white mb-2 header-glow">
                 Eshika B. Karanath
             </h1>
             <p class="text-xl sm:text-2xl accent-color font-light">
                 Computer Science & Engineering Student | Aspiring Software Developer
             </p>
             <div class="mt-4 flex justify-center space-x-4">
-                <a href="#contact" class="flex items-center space-x-2 text-white bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full transition duration-300 shadow-lg">
+                <!-- VIBRANCY CHANGE 5: Updated buttons for a vibrant look -->
+                <a href="#contact" class="flex items-center space-x-2 text-gray-900 bg-[#00eaff] hover:bg-[#00c5d6] px-6 py-2 rounded-full transition duration-300 shadow-lg font-semibold">
                     <i data-lucide="mail" class="w-5 h-5"></i>
                     <span>Get in Touch</span>
                 </a>
-                <a href="#" target="_blank" class="flex items-center space-x-2 text-white bg-gray-700 hover:bg-gray-800 px-6 py-2 rounded-full transition duration-300 shadow-lg">
+                <a href="#" target="_blank" class="flex items-center space-x-2 text-[#00eaff] bg-gray-900 hover:bg-gray-700 px-6 py-2 rounded-full transition duration-300 shadow-lg border border-[#00eaff]">
                     <i data-lucide="github" class="w-5 h-5"></i>
                     <span>GitHub (Link Placeholder)</span>
                 </a>
@@ -205,16 +224,16 @@
             padding: 0.5rem 1rem;
             border-radius: 9999px;
             background-color: #1f2937; /* Dark Gray for Badge BG */
-            color: #38bdf8; /* Accent Color for Badge Text */
+            color: #00eaff; /* VIBRANCY CHANGE 5: Updated Badge Text Color */
             font-size: 0.875rem;
             font-weight: 500;
-            border: 1px solid #38bdf8;
+            border: 1px solid #00eaff; /* VIBRANCY CHANGE 6: Updated Badge Border Color */
             transition: all 0.2s ease-in-out;
         }
         .badge:hover {
-            background-color: #38bdf8;
+            background-color: #00eaff; /* VIBRANCY CHANGE 7: Updated Badge Hover BG */
             color: #0d1117;
-            border-color: #38bdf8;
+            border-color: #00eaff;
         }
     </style>
 
